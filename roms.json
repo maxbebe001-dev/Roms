@@ -1,0 +1,9 @@
+{
+  "roms": [
+    {
+      "system": "genesis",
+      "filename": "sonic_the_hedgehog.bin",
+      "title": "Sonic the Hedgehog"
+    }
+  ]
+}
