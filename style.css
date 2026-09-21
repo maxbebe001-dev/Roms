@@ -1,0 +1,213 @@
+/* GMod Multi-Emulator Web Frontend */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #0d0e15;
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* Screen Mode (Used for Model Texture Rendering) */
+body.mode-screen #app {
+  background: #000;
+}
+
+body.mode-screen #hud,
+body.mode-screen #menu-bar,
+body.mode-screen .modal-backdrop,
+body.emu-hardware #hud,
+body.emu-hardware #menu-bar,
+body.emu-hardware .modal-backdrop {
+  display: none !important;
+}
+
+#screen-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Canvas is placed inside #screen-container by core */
+#screen-container canvas,
+canvas#canvas {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: pixelated;
+  image-rendering: -webkit-crisp-edges;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important;
+}
+
+/* Header / Menu Bar */
+#menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #181926;
+  padding: 8px 16px;
+  border-bottom: 1px solid #282a36;
+  font-size: 13px;
+  min-height: 48px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: 8px;
+  z-index: 10;
+}
+
+.menu-title {
+  font-weight: 700;
+  color: #a5b4fc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.controls-note { margin-top: 12px; font-size: 12px; color: #a6adc8; line-height: 1.5; }
+
+button.btn {
+  background: #2b2d42;
+  color: #edf2f4;
+  border: 1px solid #3d405b;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button.btn:hover {
+  background: #3d405b;
+}
+
+button.btn-primary {
+  background: #4f46e5;
+  border-color: #6366f1;
+}
+
+button.btn-primary:hover {
+  background: #4338ca;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.volume-control input[type="range"] {
+  width: 70px;
+  accent-color: #6366f1;
+}
+
+/* Alert overlay */
+#status-overlay {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid #334155;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #cbd5e1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+#status-overlay.hidden {
+  opacity: 0;
+}
+
+/* Controls Modal */
+.modal-backdrop {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal-card {
+  background: #1e1e2e;
+  border: 1px solid #45475a;
+  border-radius: 8px;
+  padding: 20px;
+  width: 440px;
+  max-width: 90vw;
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #cdd6f4;
+}
+
+.modal-body table {
+  width: 100%;
+  font-size: 12px;
+  border-collapse: collapse;
+}
+
+.modal-body th, .modal-body td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid #313244;
+}
+
+.modal-body th {
+  color: #a6adc8;
+}
+
+.modal-body td kbd {
+  background: #313244;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 11px;
+}

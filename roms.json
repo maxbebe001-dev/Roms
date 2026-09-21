@@ -1,9 +1,116 @@
 {
   "roms": [
     {
+      "system": "snes",
+      "title": "Super Mario World",
+      "filename": "super_mario_world.smc",
+      "size": 524800,
+      "sha256": "226494dbbf3e82e6ec24e8f81863fb40ad9cb7cf65ff8eb9545bc36d524e1714"
+    },
+    {
+      "system": "snes",
+      "title": "Super Mario All-Stars",
+      "filename": "super_mario_all_stars.smc",
+      "size": 2097664,
+      "sha256": "9d7f80e36e5cc50b3f7abade61a6fccfe3a17ce5fa791a3a79f8dc6992861d7a"
+    },
+    {
+      "system": "snes",
+      "title": "Jurassic Park",
+      "filename": "jurassic_park.smc",
+      "size": 2097664,
+      "sha256": "175ec6244ee95e536713141c3b05e06d886b345e69f28dfe4a7316b0afa7ce69"
+    },
+    {
+      "system": "snes",
+      "title": "Super Metroid",
+      "filename": "super_metroid.smc",
+      "size": 3145728,
+      "sha256": "12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72"
+    },
+    {
+      "system": "nes",
+      "title": "Super Mario Bros. / Duck Hunt",
+      "filename": "super_mario_bros_duck_hunt.nes",
+      "size": 81936,
+      "sha256": "23ec3f6bb68f8774070ce936869e7f62ac3490449f58e62d6ed33a0fb385d456"
+    },
+    {
+      "system": "nes",
+      "title": "Super Mario Bros. 2",
+      "filename": "super_mario_bros_2.nes",
+      "size": 262160,
+      "sha256": "6ba64ff651ede7eea2f6142f681b5f03df496456523e3712f8cd5bbee8f2f2ae"
+    },
+    {
+      "system": "nes",
+      "title": "Super Mario Bros. 3",
+      "filename": "super_mario_bros_3.nes",
+      "size": 393232,
+      "sha256": "4377a7f5e6eb50bdd2ac6f249bf1a7085500aca8eb41f38545c3a2731c51a579"
+    },
+    {
+      "system": "nes",
+      "title": "The Legend of Zelda",
+      "filename": "the_legend_of_zelda.nes",
+      "size": 131088,
+      "sha256": "89232edf4f9b52e3cb872094bc78973de080befca2ddea893b6e936066514d4e"
+    },
+    {
       "system": "genesis",
+      "title": "Sonic the Hedgehog",
       "filename": "sonic_the_hedgehog.bin",
-      "title": "Sonic the Hedgehog"
+      "size": 524288,
+      "sha256": "46160baa06362c711c9f1a5017cb7371026444936c8af5e93a78996cf32ff2a6"
+    },
+    {
+      "system": "genesis",
+      "title": "Sonic the Hedgehog 2",
+      "filename": "sonic_the_hedgehog_2.bin",
+      "size": 1048576,
+      "sha256": "193bc4064ce0daf27ea9e908ed246d87ec576cc294833badebb590b6ad8e8f6b"
+    },
+    {
+      "system": "genesis",
+      "title": "Sonic the Hedgehog 3",
+      "filename": "sonic_the_hedgehog_3.bin",
+      "size": 2097152,
+      "sha256": "d6404843c5ba32486f4c8c744acb7e1932069376960d886b1de37969787d3f9c"
+    },
+    {
+      "system": "genesis",
+      "title": "Sonic & Knuckles",
+      "filename": "sonic_and_knuckles.bin",
+      "size": 2097152,
+      "sha256": "6e12e6b33c26ebfcd0be433251d21cf6284eafe9f71b027bda3767ae59affec1"
+    },
+    {
+      "system": "gba",
+      "title": "Pokemon FireRed",
+      "filename": "pokemon_firered.gba",
+      "size": 16777216,
+      "sha256": "3d0c79f1627022e18765766f6cb5ea067f6b5bf7dca115552189ad65a5c3a8ac"
+    },
+    {
+      "system": "gba",
+      "title": "Pokemon Sapphire",
+      "filename": "pokemon_sapphire.gba",
+      "size": 16777216,
+      "sha256": "2f680a43e5c57aede4cb3b2cb04f7e15079efc122c88edaacfd6026db6e920ac"
+    },
+    {
+      "system": "gbc",
+      "title": "Pokemon Silver",
+      "filename": "pokemon_silver.gbc",
+      "size": 2097152,
+      "sha256": "72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c"
+    },
+    {
+      "system": "gb",
+      "title": "Pokemon Blue",
+      "filename": "pokemon_blue.gb",
+      "size": 1048576,
+      "sha256": "2a951313c2640e8c2cb21f25d1db019ae6245d9c7121f754fa61afd7bee6452d"
     }
   ]
 }

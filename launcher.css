@@ -1,0 +1,7 @@
+#app[hidden]{display:none}
+.gemu-library{max-width:960px;margin:6vh auto;padding:24px;color:#edf0ff;font:16px/1.5 system-ui;overflow:auto;max-height:90vh}
+.gemu-library h1{font-size:42px;margin:0;color:#a79cff}.library-note{color:#aeb4c9;max-width:720px}
+.gemu-library nav{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0}.gemu-library a{color:inherit;text-decoration:none}
+.gemu-library nav a{border:1px solid #48465c;padding:8px 14px;border-radius:8px}.gemu-library nav a[aria-current]{background:#51477c}
+.library-games{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.library-game{display:flex;flex-direction:column;padding:22px;background:#272839;border:1px solid #414359;border-radius:10px}
+.library-game strong{text-transform:capitalize}.library-game span{color:#aaaec7;margin-top:8px}.library-game:hover,.gemu-library a:focus-visible{border-color:#a79cff;background:#353348}
