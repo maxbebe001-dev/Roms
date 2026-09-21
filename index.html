@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GMod Emulator</title>
+  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="stylesheet" href="launcher.css">
+</head>
+<body>
+  <div id="app">
+    <div id="menu-bar">
+      <div class="menu-title">
+        <span id="title-system">GEMU</span>
+        <span>&bull;</span>
+        <span id="title-game" style="color: #fff;">Booting...</span>
+      </div>
+      <div class="menu-actions">
+        <div class="volume-control">
+          <span>VOL</span>
+          <input type="range" id="vol-slider" min="0" max="100" value="80">
+        </div>
+        <button class="btn" id="btn-controls">Controls</button>
+        <button class="btn" id="btn-fullscreen">Fullscreen</button>
+        <select id="save-slot" title="Save slot"><option value="1">Slot 1</option><option value="2">Slot 2</option><option value="3">Slot 3</option><option value="auto">Autosave</option></select>
+        <button class="btn" id="btn-save">Save</button>
+        <button class="btn" id="btn-load">Load</button>
+        <button class="btn" id="btn-export">Export</button>
+        <button class="btn" id="btn-import">Import</button>
+        <input id="save-file" type="file" accept=".json" hidden>
+        <button class="btn" id="btn-power">Power off</button>
+        <button class="btn" id="btn-pause">Pause</button>
+        <button class="btn" id="btn-reset">Reset</button>
+        <button class="btn btn-primary" id="btn-close" onclick="if(window.gmod && window.gmod.closeMenu) window.gmod.closeMenu();">Play on TV</button>
+      </div>
+    </div>
+
+    <div id="screen-container">
+      <div id="status-overlay">Loading emulator...</div>
+      <div id="game-container" style="width:100%;height:100%;display:flex;justify-content:center;align-items:center;"></div>
+    </div>
+
+    <!-- Controls Modal -->
+    <div class="modal-backdrop" id="modal-controls">
+      <div class="modal-card">
+        <div class="modal-header">
+          <span id="controls-title">Controller Mapping</span>
+          <button class="btn" id="btn-modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <table>
+            <thead><tr><th>Button</th><th>Default key</th></tr></thead>
+            <tbody id="controls-rows"></tbody>
+          </table>
+          <p class="controls-note">Default: arrow keys. In GMod, configure bindings through Controls or Utilities &rarr; User &rarr; Emulators &rarr; Configure Keyboard and Controller. Only buttons supported by this system are shown.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="systems.js"></script>
+  <script src="launcher.js"></script>
+  <script src="saves.js"></script>
+  <script src="save-storage.js"></script>
+  <script src="app.js"></script>
+  <script src="stream.js"></script>
+</body>
+</html>
